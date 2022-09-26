@@ -76,7 +76,7 @@
 
 10000-я итерация:
 
-![image](https://user-images.githubusercontent.com/49882084/192352861-fc072184-d37c-4512-874c-cf022fb787ed.png)
+![image](https://user-images.githubusercontent.com/49882084/192394684-21ee8f53-2e00-4746-af09-9eb6eeb31c85.png)
 
 
 
