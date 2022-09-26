@@ -75,7 +75,9 @@
 
 
 10000-я итерация
+
 ![image](https://user-images.githubusercontent.com/49882084/192352861-fc072184-d37c-4512-874c-cf022fb787ed.png)
+
 
 
 ## Задание 3
