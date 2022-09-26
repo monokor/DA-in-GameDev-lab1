@@ -9,7 +9,7 @@
 | ------ | ------ | ------ |
 | Задание 1 | * | 60 |
 | Задание 2 | * | 20 |
-| Задание 3 | # | 20 |
+| Задание 3 | * | 20 |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
@@ -99,6 +99,30 @@
 
 ![image](https://user-images.githubusercontent.com/49882084/192357689-39fff051-ef98-4435-aea9-da3b55611a57.png)
 
+
+
+### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
+
+Lr - коэффициент, который влияет на шаг при итерации
+
+При слишком большом Lr модель может так и не получится:
+
+![image](https://user-images.githubusercontent.com/49882084/192394138-453599d7-402c-4596-89a0-83133f34592e.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192394168-d9f0adf0-7704-4865-8604-eb71a6c489e3.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192394193-4cb1f347-c692-4b09-830a-c1225b8d95a5.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192394205-c00c4634-2bec-4480-8335-53019d04eceb.png)
+
+
+А при слишком малом займет крайне много итераций:
+
+![image](https://user-images.githubusercontent.com/49882084/192394353-3ced2861-3517-43e4-a102-1d0b2292153c.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192394393-003f50ee-4325-4ad1-9f2f-b840ee4bd046.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192394440-e3983810-1b68-4c12-a731-d3926d03d9c8.png)
 
 
 ## Выводы
