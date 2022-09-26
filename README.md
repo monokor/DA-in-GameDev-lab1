@@ -48,22 +48,22 @@
 ## Задание 2
 ### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
 
-Подготавливаем данные, переводим их в массивы
+Подготавливаем данные, переводим их в массивы:
 
 ![image](https://user-images.githubusercontent.com/49882084/192350141-09edc065-197a-4f16-9404-749f355f5adb.png)
 
 
-Определяем функции модели, потерь и оптимизации
+Определяем функции модели, потерь и оптимизации:
 
 ![image](https://user-images.githubusercontent.com/49882084/192350437-76642447-97b8-4f30-bf53-cba2e8077dee.png)
 
 
-Инициализируем и начинаем первую итерацию
+Инициализируем и начинаем первую итерацию:
 
 ![image](https://user-images.githubusercontent.com/49882084/192352363-720345b1-1019-4d0e-b556-ebf62cd700d4.png)
 
 
-Итерации 2-5
+Итерации 2-5:
 
 ![image](https://user-images.githubusercontent.com/49882084/192352479-17a00257-b300-4f23-b47d-6aff933333f3.png)
 
@@ -74,39 +74,32 @@
 ![image](https://user-images.githubusercontent.com/49882084/192352636-34211705-a781-483b-99e0-cc86f582fa6c.png)
 
 
-10000-я итерация
+10000-я итерация:
 
 ![image](https://user-images.githubusercontent.com/49882084/192352861-fc072184-d37c-4512-874c-cf022fb787ed.png)
 
 
 
 ## Задание 3
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
+### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+Да, она всегда стремится к нулю при множественных итерациях (заметно в задании 2)
 
-```py
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+Для примера возьмем более "удобные" данные и повторим те же действия:
 
-```
+![image](https://user-images.githubusercontent.com/49882084/192357473-857e23c8-8df4-46cf-9127-a2ae68b3d80f.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192357502-f3baf4e5-f30b-4443-8735-355a50418934.png)
+
+![image](https://user-images.githubusercontent.com/49882084/192357533-800a929c-9da5-4a91-a40f-9c4703b1e6e3.png)
+
+
+К 10000-й итерации loss совсем мал:
+
+![image](https://user-images.githubusercontent.com/49882084/192357689-39fff051-ef98-4435-aea9-da3b55611a57.png)
+
+
 
 ## Выводы
 
