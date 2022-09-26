@@ -49,19 +49,30 @@
 ### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
 
 Подготавливаем данные, переводим их в массивы
+
 ![image](https://user-images.githubusercontent.com/49882084/192350141-09edc065-197a-4f16-9404-749f355f5adb.png)
 
+
 Определяем функции модели, потерь и оптимизации
+
 ![image](https://user-images.githubusercontent.com/49882084/192350437-76642447-97b8-4f30-bf53-cba2e8077dee.png)
 
+
 Инициализируем и начинаем первую итерацию
+
 ![image](https://user-images.githubusercontent.com/49882084/192352363-720345b1-1019-4d0e-b556-ebf62cd700d4.png)
 
+
 Итерации 2-5
+
 ![image](https://user-images.githubusercontent.com/49882084/192352479-17a00257-b300-4f23-b47d-6aff933333f3.png)
+
 ![image](https://user-images.githubusercontent.com/49882084/192352532-771d7493-adaf-48aa-9921-b3e21aad10cc.png)
+
 ![image](https://user-images.githubusercontent.com/49882084/192352572-99583997-c232-4f10-98d7-2380672ac73e.png)
+
 ![image](https://user-images.githubusercontent.com/49882084/192352636-34211705-a781-483b-99e0-cc86f582fa6c.png)
+
 
 10000-я итерация
 ![image](https://user-images.githubusercontent.com/49882084/192352861-fc072184-d37c-4512-874c-cf022fb787ed.png)
