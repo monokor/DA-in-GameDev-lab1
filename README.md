@@ -8,7 +8,7 @@
 | Задание | Выполнение | Баллы |
 | ------ | ------ | ------ |
 | Задание 1 | * | 60 |
-| Задание 2 | # | 20 |
+| Задание 2 | * | 20 |
 | Задание 3 | # | 20 |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
@@ -82,6 +82,7 @@
 
 ![image](https://user-images.githubusercontent.com/49882084/195157797-023b5b7a-f295-4d06-8288-3899cf72323e.png)
 ![image](https://user-images.githubusercontent.com/49882084/195157848-817a5b67-0703-4264-9ebe-38c18e4e5374.png)
+
 ![image](https://user-images.githubusercontent.com/49882084/195157985-7ddbd995-44eb-401e-a41d-b888cb05780e.png)
 
 
