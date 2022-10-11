@@ -40,10 +40,6 @@
 ## Задание 1 
 
 Для того чтобы передавать данные между google, Python и Unity создал проект в google cloud
-
-![создал проект](https://user-images.githubusercontent.com/92369801/195123273-55c41fd0-4bd7-45bc-b98f-0a63a48749d4.jpg
-
-
 Загрузил необходимые api для google drive и google sheets. Завел сервисный аккаунт через который будет происходить передача данных между инструментами и получил ключ
 
 ![2](https://user-images.githubusercontent.com/92369801/195123341-81b6720c-7660-48cd-b8d0-77b3cdda2f92.jpg)
