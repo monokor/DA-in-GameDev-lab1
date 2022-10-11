@@ -51,7 +51,7 @@
 ![image](https://user-images.githubusercontent.com/49882084/195113495-ab909d8e-737c-4f0b-a17f-ea420d454a22.png)
 
 
-Создаем python-проект со скачанным ключом в директории, пишем код для создания данных и отправляем их в гугл таблицу: 
+Создаем python-проект со скачанным ключом в директории, пишем код для создания и отправки данных в гугл таблицу: 
 
 ![image](https://user-images.githubusercontent.com/49882084/195114658-be7aee87-b42d-471b-b24e-7af2f5fa988e.png)
 ![image](https://user-images.githubusercontent.com/49882084/195115180-e66a8f16-3a64-426d-87a5-caa2b7f53253.png)
