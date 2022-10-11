@@ -78,6 +78,12 @@
 ## Задание 2
 ### Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1. 
 
+Пусть наш код записывает в таблицу loss после каждых 100 итераций:
+
+![image](https://user-images.githubusercontent.com/49882084/195157797-023b5b7a-f295-4d06-8288-3899cf72323e.png)
+![image](https://user-images.githubusercontent.com/49882084/195157848-817a5b67-0703-4264-9ebe-38c18e4e5374.png)
+![image](https://user-images.githubusercontent.com/49882084/195157985-7ddbd995-44eb-401e-a41d-b888cb05780e.png)
+
 
 
 ## Задание 3
