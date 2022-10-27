@@ -49,6 +49,7 @@ C# скрипт и компоненты Rigidbody, Decision Requester, Behavior 
 ![image](https://user-images.githubusercontent.com/49882084/198288888-69769cfa-e30b-4c03-acbe-9ea1610af0b2.png)
 
 '''
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -105,12 +106,14 @@ public class RollerAgent : Agent
         }
     }
 }
+                                                    
 '''
 
 
 В корень проекта добавляем файл конфигурации .yaml нашей нейронной сети:
 
 ```
+            
 behaviors:
   RollerBall:
     trainer_type: ppo
@@ -134,6 +137,7 @@ behaviors:
     max_steps: 500000
     time_horizon: 64
     summary_freq: 10000
+            
 ```
 
 
