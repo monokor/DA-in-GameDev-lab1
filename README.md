@@ -9,7 +9,7 @@
 | ------ | ------ | ------ |
 | Задание 1 | * | 60 |
 | Задание 2 | * | 20 |
-| Задание 3 | # | 20 |
+| Задание 3 | * | 20 |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
@@ -338,9 +338,113 @@ Behavior Parameters позволяет настроить поведение.
 Тут также нужно дать имя, по которому модель найдет объект и здесь же устанавливается обученная модель.
 
 ## Задание 3
-### 
+### Доработайте сцену и обучите ML-Agent таким образом, чтобы шар перемещался между двумя кубами разного цвета. Кубы должны, как и в первом задании, случайно изменять координаты на плоскости.
 
 
+Увеличиваем Space Size у шара:
+
+![image](https://user-images.githubusercontent.com/49882084/198334741-f0647f18-6172-4974-92d0-eab5e736dd5b.png)
+
+
+Добавляем еще один куб:
+
+![image](https://user-images.githubusercontent.com/49882084/198336019-bce141cd-4d0c-4c93-bef6-3c4e8f45cf2f.png)
+
+
+Награду агент будет получать, если докоснется до обоих кубов:
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
+
+public class RollerAgent : Agent
+{
+    Rigidbody rBody;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
+
+    public Transform Target;
+    public Transform Target2;
+    public bool gotTarget = false;
+    public bool gotTarget2 = false;
+
+    public override void OnEpisodeBegin()
+    {
+        if (this.transform.localPosition.y < 0)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+
+        Target.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+        Target2.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
+    }
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        sensor.AddObservation(Target.localPosition);
+        sensor.AddObservation(Target2.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(rBody.velocity.x);
+        sensor.AddObservation(rBody.velocity.z);
+    }
+    public float forceMultiplier = 10;
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
+        float distanceToTarget2 = Vector3.Distance(this.transform.localPosition, Target2.localPosition);
+
+        if (distanceToTarget < 1.42f) gotTarget = true;
+        if (distanceToTarget2 < 1.42f) gotTarget2 = true;
+
+        if(gotTarget && gotTarget2)
+        {
+            SetReward(1.0f);
+            gotTarget = false;
+            gotTarget2 = false;
+            EndEpisode();
+        }
+        else if (this.transform.localPosition.y < 0)
+        {
+            gotTarget = false;
+            gotTarget2 = false;
+            EndEpisode();
+        }
+    }
+}
+
+```
+
+
+Не забываем указать второй куб второй целью:
+
+![image](https://user-images.githubusercontent.com/49882084/198337460-22fe17bb-61b9-4d97-aeac-a097d79677ae.png)
+
+
+Запускаем новое обучение:
+
+![image](https://user-images.githubusercontent.com/49882084/198337278-a9c18be8-8419-45b3-a8bb-42654af44b74.png)
+![image](https://user-images.githubusercontent.com/49882084/198337334-86c715ba-cd61-4840-b463-3774eec98206.png)
+
+
+Вставляем в шар новую модель и проверяем:
+
+![image](https://user-images.githubusercontent.com/49882084/198338059-fc73ec88-4a52-49bd-9fd4-e024161f2ce3.png)
+![image](https://user-images.githubusercontent.com/49882084/198338094-f7b601c8-21ce-40e2-a12e-04938d3661e5.png)
+
+Модель работает. Есть одна деталь - так как кубы не пропадают после касания, шар стукается об первый и после этого часто испытывает проблемы добраться до второго; но по итогу у него все равно получается.
 
 
 ## Выводы
