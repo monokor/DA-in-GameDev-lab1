@@ -91,6 +91,28 @@ XOR
 
 Создал простую сцену с двумя кубами. Красный = 0, Зелёный = 1.
 
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TriggerOR : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.gameObject.GetComponent<Renderer>().material.color == Color.green || this.gameObject.GetComponent<Renderer>().material.color == Color.green) 
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.green;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.green;
+        }
+        else
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }
+    }
+}
+```
 
 
 
