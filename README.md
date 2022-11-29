@@ -129,6 +129,8 @@ public class TriggerOR : MonoBehaviour
 ![image](https://user-images.githubusercontent.com/49882084/204588600-9ffacb76-5578-422f-83c9-f07fd4a0144c.png)
 
 
+![image](https://user-images.githubusercontent.com/49882084/204588844-fea29725-0ad2-482a-853e-64aff723c679.png)
+![image](https://user-images.githubusercontent.com/49882084/204588871-9f8c26d1-d921-426f-966c-8e8a3d8e96df.png)
 
 
 ## Выводы
