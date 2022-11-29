@@ -50,6 +50,26 @@ OR
 ![image](https://user-images.githubusercontent.com/49882084/204563135-7df68f72-98e9-499a-9c57-e948b0902055.png)
 
 
+AND
+
+![image](https://user-images.githubusercontent.com/49882084/204563836-5c0011f0-1c99-47bc-92ab-61d6bc86033c.png)
+![image](https://user-images.githubusercontent.com/49882084/204563877-f7c901bf-0e1b-4b2e-968d-4af144db6194.png)
+
+
+NAND
+
+![image](https://user-images.githubusercontent.com/49882084/204564298-69cf91a5-3a67-48a7-89c9-66366e089cb0.png)
+![image](https://user-images.githubusercontent.com/49882084/204564341-b3855ebe-75a9-4027-b947-88adf67c170f.png)
+
+
+XOR
+
+![image](https://user-images.githubusercontent.com/49882084/204564941-3deccfd9-ee93-4029-96d1-e424c18d783b.png)
+![image](https://user-images.githubusercontent.com/49882084/204564966-25bfdc84-8fdb-4e2b-8029-478e2ca40205.png)
+
+Одиночный перцептрон не сможет решать XOR, потому что это не задача линейной классификации
+
+
 
 ## Задание 2
 ### Построить графики зависимости количества эпох от ошибки обучения. Указать от чего зависит необходимое колчество эпох обучения.
