@@ -116,18 +116,25 @@ public class TriggerOR : MonoBehaviour
 }
 ```
 
+0 + 0 = 0
+
+![image](https://user-images.githubusercontent.com/49882084/204588572-27cb4e5e-1790-4012-900e-d059e3b1a9a2.png)
+![image](https://user-images.githubusercontent.com/49882084/204588600-9ffacb76-5578-422f-83c9-f07fd4a0144c.png)
+
+
+0 + 1 = 1
 
 ![image](https://user-images.githubusercontent.com/49882084/204588315-ba86ca98-e9d9-493b-887c-a2db7a3d934c.png)
 ![image](https://user-images.githubusercontent.com/49882084/204588384-c7e0a378-4f52-4aad-8b7e-0a8315545a5b.png)
 
 
+1 + 0 = 1
+
 ![image](https://user-images.githubusercontent.com/49882084/204588495-09648cdc-464f-4af4-a9bb-c9ac85e2392c.png)
 ![image](https://user-images.githubusercontent.com/49882084/204588525-8ffe0e70-133f-4295-89ea-cff610eda80b.png)
 
 
-![image](https://user-images.githubusercontent.com/49882084/204588572-27cb4e5e-1790-4012-900e-d059e3b1a9a2.png)
-![image](https://user-images.githubusercontent.com/49882084/204588600-9ffacb76-5578-422f-83c9-f07fd4a0144c.png)
-
+1 + 1 = 1
 
 ![image](https://user-images.githubusercontent.com/49882084/204588844-fea29725-0ad2-482a-853e-64aff723c679.png)
 ![image](https://user-images.githubusercontent.com/49882084/204588871-9f8c26d1-d921-426f-966c-8e8a3d8e96df.png)
