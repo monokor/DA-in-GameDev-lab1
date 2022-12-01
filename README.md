@@ -49,20 +49,20 @@
 ```
 tempInf = ((pricesMonth[1] - pricesMonth[0]) / pricesMonth[0]) * 100;
 
-            if (tempInf <= 1f) SetReward(1.0f);
-            else if (tempInf <= 3f) SetReward(0.6f);
-            else if (tempInf <= 6f) SetReward(0.3f);
-            else if (tempInf <= 20f) SetReward(0.1f);
-            else if (tempInf <= 50f) SetReward(0.0f);
-            else SetReward(-0.5f);
+if (tempInf <= 1f) SetReward(1.0f);
+else if (tempInf <= 3f) SetReward(0.6f);
+else if (tempInf <= 6f) SetReward(0.3f);
+else if (tempInf <= 20f) SetReward(0.1f);
+else if (tempInf <= 50f) SetReward(0.0f);
+else SetReward(-0.5f);
 
-            EndEpisode();
+EndEpisode();
 ```
 
 Так я рассчитываю, что обучение и графики будут стабильнее, а модели будет проще обучаться.
 
 
-Прочитал документацию, проверил около 60 вариантов конфигурации Economic.yaml, и, не считая, погрешностей, пришел к следующим выводам:
+Прочитал документацию, проверил около 60 вариантов конфигурации Economic.yaml, и, не считая погрешностей, пришел к следующим выводам:
 
 batch_size - количество опытов в каждой итерации. В нашем случае лучше поставить поменьше, например 256
 
