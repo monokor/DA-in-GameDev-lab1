@@ -82,7 +82,40 @@ max_steps - ограничение по общему количеству шаг
 Явное влияние остальных параметров ("изменить, чтобы стало лучше") я не заметил, но у меня в принципе обучение постоянно вело себя непредсказуемо.
 
 
+Пример одной из конфигураций:
 
+```
+behaviors:
+  Economic:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256
+      buffer_size: 10240
+      learning_rate: 1.0e-5
+      learning_rate_schedule: linear
+      beta: 0.0001
+      epsilon: 0.1
+      lambd: 0.93
+      num_epoch: 3      
+    network_settings:
+      normalize: false
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    checkpoint_interval: 500000
+    max_steps: 200000
+    time_horizon: 64
+    summary_freq: 1000
+    self_play:
+      save_steps: 20000
+      team_change: 100000
+      swap_steps: 10000
+      play_against_latest_model_ratio: 0.5
+      window: 10
+```
 
 
 
@@ -90,6 +123,15 @@ max_steps - ограничение по общему количеству шаг
 
 ## Задание 2
 ### Описать результаты, выведенные в TensorBoard.
+
+Примеры некоторых полученных графиков (сглаживание - 0.999):
+
+![image](https://user-images.githubusercontent.com/49882084/205174015-99644dab-ee80-4515-85cd-f4b7756caace.png)
+![image](https://user-images.githubusercontent.com/49882084/205174056-b23605e1-69e3-453b-b002-6e84f32c5ddc.png)
+![image](https://user-images.githubusercontent.com/49882084/205174078-13b22ccf-78b7-4638-b526-45e82fe17fe1.png)
+
+
+
 
 
 
